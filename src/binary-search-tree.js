@@ -94,7 +94,7 @@ class BinarySearchTree {
     // remove line with error and write your code here
     if (!this.treeRoot) return null;
     let current = this.treeRoot;
-    while (current) current = current.left;
+    while (current && current.left) current = current.left;
     return current.data;
   }
 
@@ -103,7 +103,7 @@ class BinarySearchTree {
     // remove line with error and write your code here
     if (!this.treeRoot) return null;
     let current = this.treeRoot;
-    while (current) current = current.right;
+    while (current && current.right) current = current.right;
     return current.data;
   }
 }
